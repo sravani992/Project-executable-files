@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+</head>
+<body>
+    <header>
+        <div style="background-color: black; padding: 20px;">
+            <a href="{{ url_for('home') }}" style="color: white; text-decoration: none; float: right; font-size: 20px;">Home</a>
+        </div>
+    </header>
+    <div style="text-align: center;">
+    <img src="{{url_for('static',filename='predict.jpg')}}" width="1400px" height="300px">
+    </div>
+    <h1 style="text-align: center;"><font color="black" size="55px"><i>Enter the following details to predict!!!...</i></font></h1>
+    <div style="text-align: center;">
+    <form action="{{url_for('output')}}" method="POST"> 
+            <label style="margin-bottom: 10px;"><font size="5px"><b>Age:</b></font></label><br>
+            <input style="margin-bottom: 10px;" id="inp" name="age" type="number" required>
+            <br>
+            <label style="margin-bottom: 10px;"><font size="5px"><b>Gender:</b></font></label><br>
+            <input style="margin-bottom: 10px;" name="gender" type="number" placeholder="0-male//1-female" required>
+            <br>
+            <label style="margin-bottom: 10px;"><font size="5px"><b>Episode Number:</b></font></label><br>
+            <input style="margin-bottom: 10px;" name="episode_number" type="number" placeholder="enter number from 1-4" required><br>
+            <input style="background-color: rgb(83, 159, 240); width: 200px; height: 30px; font-size: 20px; margin-top: 20px;" type="submit" value="Submit"><br>
+    </form>
+    </div>
+   <!-- <h2 style="text-align: center;">Result: {{ result }}</h2>-->
+</body>
+</html>
